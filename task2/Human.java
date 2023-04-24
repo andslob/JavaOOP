@@ -13,6 +13,16 @@ public class Human implements Runner {
     }
 
     @Override
+    public boolean jump(int distance) {
+        return false;
+    }
+
+    @Override
+    public boolean run(int distance) {
+        return false;
+    }
+
+    @Override
     public String getName() {
         return name;
     }

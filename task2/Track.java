@@ -3,6 +3,7 @@ package JavaOOP.task2;
 public class Track implements Obstacle {
 
     private int length;
+    private int height = 0;
 
     public Track(int length){
         this.length = length;
@@ -15,6 +16,6 @@ public class Track implements Obstacle {
 
     @Override
     public int getHeight() {
-        return 0;
+        return height;
     }
 }
