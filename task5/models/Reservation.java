@@ -1,5 +1,4 @@
-package ru.geekbrains.lesson5.models;
-
+package JavaOOP.task5.models;
 import java.util.Date;
 
 public class Reservation {

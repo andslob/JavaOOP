@@ -1,25 +1,21 @@
-package ru.geekbrains.lesson5.presenters;
-
-import ru.geekbrains.lesson5.models.Table;
+package JavaOOP.task5.presenters;
 
 import java.util.Collection;
 import java.util.Date;
 
+import JavaOOP.task5.models.Table;
+
 public interface Model {
 
-    /**
-     * Получение всех доступных столиков
-     * @return столики
-     */
+
     Collection<Table> loadTables();
 
-    /**
-     * Бронирование столика
-     * @param reservationDate дата бронирования
-     * @param tableNo номер столика
-     * @param name имя клиента
-     * @return номер брони
-     */
+
     int reservationTable(Date reservationDate, int tableNo, String name);
+
+    int changeReservationTable(int oldReservation, Date reservationDate, int tableNo, String name);
+
+    void deleteReservation(int oldReservation);
+
 
 }

@@ -1,12 +1,11 @@
-package ru.geekbrains.lesson5.presenters;
-
-import ru.geekbrains.lesson5.models.Table;
-import ru.geekbrains.lesson5.models.TableModel;
+package JavaOOP.task5.presenters;
 
 import java.util.Collection;
 import java.util.Date;
 
-public class BookingPresenter implements ViewObserver {
+import JavaOOP.task5.models.Table;
+
+public class BookingPresenter implements ViewObserver{
 
     private final Model model;
     private final View view;
@@ -18,39 +17,35 @@ public class BookingPresenter implements ViewObserver {
         this.view.setObserver(this);
     }
 
-    /**
-     * Загрузить список всех столиков
-     */
     public void loadTables(){
         if (tables == null){
             tables = model.loadTables();
         }
     }
 
-    /**
-     * Отобразить список столиков
-     */
     public void updateView(){
         view.showTables(tables);
     }
 
-    /**
-     * Отобразить результат бронирования столика
-     * @param reservationNo номер брони
-     */
     private void updateReservationStatusView(int reservationNo){
         view.showReservationStatus(reservationNo);
     }
 
-    /**
-     * Получили уведомление о попытке бронирования столика
-     * @param orderDate дата бронирования
-     * @param tableNo номер столика
-     * @param name имя клиента
-     */
     @Override
     public void onReservationTable(Date orderDate, int tableNo, String name) {
         int reservationNo = model.reservationTable(orderDate, tableNo, name);
         updateReservationStatusView(reservationNo);
+    }
+
+    @Override
+    public void onChangeReservationTable(int oldReservation, Date reservationDate, int tableNo, String name) {
+        int reservationNo = model.changeReservationTable(oldReservation, reservationDate, tableNo, name);
+        updateReservationStatusView(reservationNo);
+
+    }
+
+    @Override
+    public void deleteReservation(int oldReservation) {
+    model.deleteReservation(oldReservation);
     }
 }
