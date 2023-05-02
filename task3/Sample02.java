@@ -85,7 +85,7 @@ abstract class Employee implements Comparable<Employee>{
         this.salary = salary;
     }
 
-    public abstract  double calculateSalary();
+    public abstract double calculateSalary();
 
     @Override
     public String toString() {

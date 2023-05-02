@@ -3,7 +3,7 @@ import java.util.Date;
 
 public class Reservation {
 
-    private static int counter = 1000;
+    private static int counter = 0;
     private final int id;
 
     private Date date;
