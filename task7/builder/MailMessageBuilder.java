@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson7.builder;
+package JavaOOP.task7.builder;
 
 import java.util.Objects;
 

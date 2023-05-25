@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson7.singleton;
+package JavaOOP.task7.singleton;
 
 public class Singleton {
 

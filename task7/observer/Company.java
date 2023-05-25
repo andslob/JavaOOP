@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson7.observer;
+package JavaOOP.task7.observer;
 
 import java.util.Random;
 

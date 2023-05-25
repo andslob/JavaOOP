@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson7.adapter;
+package JavaOOP.task7.adapter;
 
 public class MeteoStore {
 
