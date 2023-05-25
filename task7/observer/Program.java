@@ -17,10 +17,12 @@ public class Program {
         Master ivanov = new Master("Ivanov");
         Master sidorov = new Master("Sidorov");
         Student petrov = new Student("Petrov");
+        Midle sedinin = new Midle("Sedinin");
 
         jobAgency.registerObserver(ivanov);
         jobAgency.registerObserver(sidorov);
         jobAgency.registerObserver(petrov);
+        jobAgency.registerObserver(sedinin);
 
         for (int i = 0; i < 10; i++){
             geekBrains.needEmployee();

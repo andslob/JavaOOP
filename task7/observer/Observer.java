@@ -5,6 +5,6 @@ package JavaOOP.task7.observer;
  */
 public interface Observer {
 
-    void receiveOffer(String companyName, double salary);
+    void receiveOffer(String companyName, double salary, String nameVacancy);
 
 }
