@@ -2,7 +2,7 @@ package JavaOOP.task7.observer;
 
 import java.util.Random;
 
-public class Company {
+public class Company implements CreateVacancy {
 
     private Random random;
     private String nameCompany;
